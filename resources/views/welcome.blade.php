@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Labbi Mobili</title>
+    <meta name="environment" content="{{ env('APP_ENV') }}">
+    <title>Darkshare Chat - by @jstoone</title>
 
     <link rel="stylesheet" href="css/app.css">
 </head>

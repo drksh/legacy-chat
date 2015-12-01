@@ -16892,7 +16892,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/jstoone/Dropbox/Coding/web/labbi-mobili/resources/assets/js/components/commandline.vue"
+  var id = "/Users/jstoone/Dropbox/Coding/web/darkshare-chat/resources/assets/js/components/commandline.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -16957,7 +16957,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/jstoone/Dropbox/Coding/web/labbi-mobili/resources/assets/js/components/messages.vue"
+  var id = "/Users/jstoone/Dropbox/Coding/web/darkshare-chat/resources/assets/js/components/messages.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -16981,8 +16981,14 @@ var _SocketMessenger2 = _interopRequireDefault(_SocketMessenger);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var $environmentMeta = document.querySelector('meta[name="environment"]');
+var address = "http://188.166.55.158:3000";
+if ($environmentMeta.getAttribute('content') == 'local') {
+    address = "http://192.168.10.10:3000";
+}
+
 var Vue = require('vue');
-var socket = require('socket.io-client')('http://192.168.10.10:3000');
+var socket = require('socket.io-client')(address);
 
 new Vue({
     el: "#app",

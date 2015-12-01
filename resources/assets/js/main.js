@@ -1,5 +1,11 @@
+var $environmentMeta = document.querySelector('meta[name="environment"]');
+var address = "http://188.166.55.158:3000";
+if($environmentMeta.getAttribute('content') == 'local') {
+    address = "http://192.168.10.10:3000";
+}
+
 var Vue = require('vue');
-var socket = require('socket.io-client')('http://192.168.10.10:3000');
+var socket = require('socket.io-client')(address);
 
 import Messages from './components/messages.vue';
 import Commandline from './components/commandline.vue';
