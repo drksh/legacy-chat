@@ -1,6 +1,6 @@
 output=`ps aux|grep socket.js`
 set -- $output
 pid=$2
-kill $pid
+kill $pid > /dev/null 2>&1
 sleep 2
 kill -9 $pid >/dev/null 2>&1
