@@ -1,0 +1,13 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "components/Messages";
+@import "components/Commandline";
+
+html, body, #app {
+	display: block;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
